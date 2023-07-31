@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NutriGuide.Views.UserProfile">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Image Source="nutriguide.png" Aspect="AspectFit" Margin="10" Grid.Column="0"/>
+
+            <ScrollView Grid.Row="1">
+                <StackLayout Margin="20">
+                    <Label Text="About NutriGuide"
+                           FontSize="Large"
+                           FontAttributes="Bold"
+                           Margin="0,20,0,10"/>
+
+                    <Label Text="Version 1.0"
+                           FontSize="Medium"
+                           Margin="0,10,0,10"/>
+
+                    <Label Text="Developed by Amirul Hafidzi Bin Mohd Fardhi"
+                           FontSize="Medium"
+                           Margin="0,10,0,10"/>
+
+                    <Label Text="This app is for people who want to have a healthy lifestyle by consuming healthy food that will be provided by the app. The app will help user to identify their needs by displaying different body parts of human.The app will then show the list of food that will benefit the selected part of human body that the users have chosen.Suggestion of meal will also be displayed by the app according to the food to help users plan their needs.This will not only provide users with helpful information about food and its benefit but also help users in making right decision when consuming their daily meal."
+                           FontSize="Medium"
+                           Margin="0,20,0,0"/>
+
+                </StackLayout>
+            </ScrollView>
+
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

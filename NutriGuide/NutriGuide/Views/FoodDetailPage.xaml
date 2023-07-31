@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          x:Class="NutriGuide.Views.FoodDetailPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+
+                <Image Source="{Binding Image}"
+                   Aspect="AspectFill"
+                   HeightRequest="300"
+                   Margin="0,0,0,20"/>
+
+                <Label Text="{Binding Name}"
+                   FontSize="Large"
+                   TextColor="#2196F3"
+                   Margin="0,0,0,10"
+                   HorizontalOptions="Center"/>
+
+                <Label Text="{Binding Description}"
+                   FontSize="Medium"
+                   TextColor="#555"
+                   Margin="0,0,0,20"/>
+
+                <BoxView Color="#E0E0E0"
+                     HeightRequest="1"
+                     Margin="0,0,0,20"/>
+
+                <Label Text="Benefits"
+                   FontSize="Large"
+                   TextColor="#2196F3"
+                   Margin="0,0,0,10"
+                   HorizontalOptions="Center"/>
+
+                <Label Text="{Binding Benefit}"
+                   FontSize="Medium"
+                   TextColor="#555"
+                   Margin="0,0,0,20"/>
+
+                <Label Text="Disadvantages"
+                   FontSize="Large"
+                   TextColor="#2196F3"
+                   Margin="0,0,0,10"
+                   HorizontalOptions="Center"/>
+
+                <Label Text="{Binding Disadvantage}"
+                   FontSize="Medium"
+                   TextColor="#555"
+                   Margin="0,0,0,20"/>
+
+                <BoxView Color="#E0E0E0"
+                     HeightRequest="1"
+                     Margin="0,0,0,20"/>
+
+                <Label Text="{Binding MealName}"
+                   FontSize="Large"
+                   TextColor="#2196F3"
+                   Margin="0,0,0,10"
+                   HorizontalOptions="Center"/>
+
+                <Image Source="{Binding Image2}"
+                   Aspect="AspectFill"
+                   HeightRequest="150"
+                   Margin="0,0,0,20"/>
+
+                <Label Text="Ingredients"
+                   FontSize="Large"
+                   TextColor="#2196F3"
+                   Margin="0,0,0,10"
+                   HorizontalOptions="Center"/>
+
+                <Label Text="{Binding Ingredient}"
+                   FontSize="Medium"
+                   TextColor="#555"
+                   Margin="0,0,0,20"/>
+
+                <Label Text="Instructions"
+                   FontSize="Large"
+                   TextColor="#2196F3"
+                   Margin="0,0,0,10"
+                   HorizontalOptions="Center"/>
+
+                <Label Text="{Binding Instruction}"
+                   FontSize="Medium"
+                   TextColor="#555"
+                   Margin="0,0,0,20"/>
+
+                <BoxView Color="#E0E0E0"
+                     HeightRequest="1"
+                     Margin="0,0,0,20"/>
+
+                <!--<StackLayout Orientation="Horizontal"
+                         Margin="0,0,0,20"
+                         HorizontalOptions="CenterAndExpand">
+
+                    <Image Source="edit.png"
+                       HeightRequest="30"
+                       WidthRequest="30"
+                       Margin="0,0,10,0">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="EditTap_Tapped"
+                                              CommandParameter="{Binding Id}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Image Source="delete.png"
+                       HeightRequest="30"
+                       WidthRequest="30"
+                        >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="DeleteTapp_Tapped"
+                                                  CommandParameter="{Binding Id}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>-->
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

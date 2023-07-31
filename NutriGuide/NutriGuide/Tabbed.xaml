@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:nutriguide="clr-namespace:NutriGuide"
+            x:Class="NutriGuide.Tabbed"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="LightPink"
+            SelectedTabColor="Black"
+            UnselectedTabColor="Gray"
+            xmlns:local="clr-namespace:NutriGuide" xmlns:local1="clr-namespace:NutriGuide.Views">
+    <!--Pages can be added as references or inline-->
+
+    <local:MainPage Title="Body Part">
+        <local:MainPage.IconImageSource>
+            <FileImageSource File="body1.png" />
+        </local:MainPage.IconImageSource>
+    </local:MainPage>
+
+    <!--<local1:addMeal Title="Add Meal">
+        <local1:addMeal.IconImageSource>
+            <FileImageSource File="plus.png" />
+        </local1:addMeal.IconImageSource>
+    </local1:addMeal>-->
+
+    <local1:MealPlan Title="Meal Plan">
+        <local1:MealPlan.IconImageSource>
+            <FileImageSource File="calendars.png" />
+        </local1:MealPlan.IconImageSource>
+    </local1:MealPlan>
+
+    <local1:UserProfile Title="About">
+        <local1:UserProfile.IconImageSource>
+            <FileImageSource File="home.png" />
+        </local1:UserProfile.IconImageSource>
+    </local1:UserProfile>
+
+
+
+</TabbedPage>

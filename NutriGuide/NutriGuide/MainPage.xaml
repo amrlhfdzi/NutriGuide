@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NutriGuide.MainPage"
+             Title="NutriGuide">
+
+    <ContentPage.Content>
+        <StackLayout Padding="10,20">
+            <Label Text="Select a body part to view recommended foods"
+                   FontSize="Large"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,10"/>
+            <CollectionView ItemsSource="{Binding BodyPart}"
+                            SelectionMode="Single"
+                            Margin="0, 10"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            ItemsLayout="VerticalGrid, 2"
+                            BackgroundColor="WhiteSmoke"
+                            ItemSizingStrategy="MeasureAllItems"
+                            SelectionChanged="OnItemSelected">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="4" Margin="4">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".10*"/>
+                                <ColumnDefinition Width=".0*"/>
+                            </Grid.ColumnDefinitions>
+                            <Frame IsClippedToBounds="True" Grid.Row="0" Grid.Column="0" HasShadow="True" Padding="10" BackgroundColor="White" CornerRadius="10">
+                                <StackLayout Orientation="Vertical">
+                                    <Image Source="{Binding Image}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,10" Aspect="AspectFit"/>
+                                    <Label Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" Margin="0,10"/>
+                                    <BoxView HeightRequest="1" BackgroundColor="#CCCCCC" Margin="20,0"/>
+                                    <Button Text="View recommended foods" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Margin="0,10" BackgroundColor="#008000" TextColor="White" />
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

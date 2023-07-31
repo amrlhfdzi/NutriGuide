@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NutriGuide.Views.BonesPageDetail">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+
+            <SearchBar Placeholder="Search"
+                       x:Name="TxtSearch"
+                       
+                       SearchButtonPressed="TxtSearch_SearchButtonPressed"></SearchBar>
+
+            <Label Text="Recommended Foods for Healthy Bones"
+                   FontSize="Large"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,10"/>
+
+            <ListView x:Name="bonesPageDetail"
+                      ItemsSource="{Binding FoodList}"
+                      HasUnevenRows="true"
+                      SeparatorVisibility="None"
+                      BackgroundColor="#F5F5F5"
+                      Margin="0,10"
+                       ItemSelected="OnItemSelected"
+                       
+                  IsPullToRefreshEnabled="True"
+>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <!--<SwipeView>
+                                <SwipeView.LeftItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="Edit" BackgroundColor="Red"
+                                                   x:Name="EditSwipeItem"
+                                                   CommandParameter="{Binding Id}"
+                                                   Invoked="EditSwipeItem_Invoked"></SwipeItem>
+                                        --><!--<SwipeItem Text="Delete" BackgroundColor="Red" CommandParameter="{Binding Id}"
+                                                   x:Name="DeleteSwipeItem"
+                                                   Invoked="DeleteMenuItem_Clicked"></SwipeItem>--><!--
+                                    </SwipeItems>
+                                </SwipeView.LeftItems>-->
+
+
+
+                                <Grid Padding="10" >
+                                    <Frame CornerRadius="10" HasShadow="True">
+                                        <StackLayout Orientation="Horizontal">
+
+                                            <Image HeightRequest="100"
+                                       WidthRequest="100"
+                                       Source="{Binding Image}"/>
+                                            <StackLayout VerticalOptions="Center">
+                                                <Label VerticalOptions="Center"
+                                       Text="{Binding Name}"
+                                        FontSize="Large"/>
+                                            </StackLayout>
+                                            <!--<Image Source="edit.png" HeightRequest="30" Margin="5">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="EditTap_Tapped" />
+                                                </Image.GestureRecognizers>
+                                            </Image>-->
+                                        </StackLayout>
+                                    </Frame>
+                                </Grid>
+                            <!--</SwipeView>-->
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

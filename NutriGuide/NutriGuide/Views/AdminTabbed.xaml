@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NutriGuide.Views.AdminTabbed"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="LightPink"
+            SelectedTabColor="Black"
+            UnselectedTabColor="Gray"
+            xmlns:local="clr-namespace:NutriGuide" xmlns:local1="clr-namespace:NutriGuide.Views">
+    <!--Pages can be added as references or inline-->
+
+    <local1:addMeal Title="Add Food">
+        <local1:addMeal.IconImageSource>
+            <FileImageSource File="body1.png" />
+        </local1:addMeal.IconImageSource>
+    </local1:addMeal>
+
+    <!--<local1:addMeal Title="Add Meal">
+        <local1:addMeal.IconImageSource>
+            <FileImageSource File="plus.png" />
+        </local1:addMeal.IconImageSource>
+    </local1:addMeal>-->
+
+    <local1:AdminEditPage Title="List Food">
+        <local1:AdminEditPage.IconImageSource>
+            <FileImageSource File="food.png" />
+        </local1:AdminEditPage.IconImageSource>
+    </local1:AdminEditPage>
+
+    <!--<local1:AdminAboutPage Title="About">
+        <local1:AdminAboutPage.IconImageSource>
+            <FileImageSource File="home.png" />
+        </local1:AdminAboutPage.IconImageSource>
+    </local1:AdminAboutPage>-->
+
+    <local1:AdminAboutPage Title="About">
+        <local1:AdminAboutPage.IconImageSource>
+            <FileImageSource File="home.png" />
+        </local1:AdminAboutPage.IconImageSource>
+    </local1:AdminAboutPage>
+    <!--Pages can be added as references or inline-->
+</TabbedPage>

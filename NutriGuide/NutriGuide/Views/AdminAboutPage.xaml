@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NutriGuide.Views.AdminAboutPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Image Source="nutriguide.png" Aspect="AspectFit" Margin="10" Grid.Column="0"/>
+
+            <ScrollView Grid.Row="1">
+                <StackLayout Margin="20">
+                    <Label Text="About NutriGuide Admin"
+                           FontSize="Large"
+                           FontAttributes="Bold"
+                           Margin="0,20,0,10"/>
+
+                    <Label Text="Version 1.0"
+                           FontSize="Medium"
+                           Margin="0,10,0,10"/>
+
+                    <Label Text="Developed by Amirul Hafidzi Bin Mohd Fardhi"
+                           FontSize="Medium"
+                           Margin="0,10,0,10"/>
+
+                    <Label Text="This is the admin page. Admin can add list of food that will benefit the users which consist of the food's name, description, image, benefits, risks and meal reccomendation based on the selected food. Admin can also edit or delete the record that have been added using the provided buttons."                           FontSize="Medium"
+                           Margin="0,20,0,0"/>
+
+                </StackLayout>
+            </ScrollView>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

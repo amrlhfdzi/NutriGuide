@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NutriGuide.Views.FoodDetailEdit"
+             Title="Edit Food Details">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Edit Food" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,10"/>
+
+                <Entry x:Name="TxtCategory" IsVisible="false" />
+                <Label Text="Food Name" />
+                <Entry x:Name="TxtName" Placeholder="Food's Name"  />
+
+                <Label Text="Food Image" />
+                <Image x:Name="TxtImage" HeightRequest="150" Margin="0,10" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="ImageTap" Tapped="ImageTap_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Label Text="Food Description" />
+                <Editor x:Name="TxtDescription" Placeholder="Food's Description" />
+
+                <Label Text="Food Benefit" />
+                <Editor x:Name="TxtBenefit" Placeholder="Food's Benefit" />
+
+                <Label Text="Food Risks" />
+                <Editor x:Name="TxtDisadvantage" Placeholder="Food's Risks" />
+
+                <Label Text="Edit Meal Reccomendation" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,10"/>
+
+
+                <Label Text="Meal's Name" />
+                <Entry x:Name="TxtMealName" Placeholder="Meal's Name"  />
+
+                <Label Text="Meal Image" />
+                <Image x:Name="TxtImage2" HeightRequest="150" Margin="0,10" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="ImageTap2" Tapped="ImageTap_Tapped2"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Label Text="Meal Ingredients" />
+                <Editor x:Name="TxtIngredient" Placeholder="Meal's Ingredient" />
+
+                <Label Text="Meal Instructions" />
+                <Editor x:Name="TxtInstruction" Placeholder="Meal's Instruction" />
+
+                <Button Text="Update Food" Clicked="ButtonUpdate_Clicked" Margin="0,10"/>
+
+                <Entry x:Name="TxtId" IsVisible="false" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

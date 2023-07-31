@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NutriGuide.Views.addMeal">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <Label Text="Add a Food" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,10"/>
+
+                <Label Text="Category" FontSize="Medium" Margin="0,10"/>
+                <Picker x:Name="CategoryPicker" Title="Select a category" FontSize="Medium">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Eyes</x:String>
+                            <x:String>Brain</x:String>
+                            <x:String>Skin</x:String>
+                            <x:String>Bones</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Label Text="Name" FontSize="Medium" Margin="0,10"/>
+                <Entry x:Name="NameEntry" Placeholder="Enter food name" FontSize="Medium"/>
+
+                <Label Text="Food Image" FontSize="Medium" Margin="0,10"/>
+
+                <Image x:Name="resultImage" HeightRequest="150" Margin="0,10">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="ImageTap" Tapped="ImageTap_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Label Text="Description" FontSize="Medium" Margin="0,10"/>
+                <Editor x:Name="DescriptionEntry" Placeholder="Enter food description" FontSize="Medium" HeightRequest="100" />
+
+                <Label Text="Benefit" FontSize="Medium" Margin="0,10"/>
+                <Editor x:Name="BenefitEntry" Placeholder="Enter food benefit" FontSize="Medium" HeightRequest="100" />
+
+                <Label Text="Risk" FontSize="Medium" Margin="0,10"/>
+                <Editor x:Name="DisadvantageEntry" Placeholder="Enter food risks" FontSize="Medium" HeightRequest="100" />
+
+                <Label Text="Meal Name" FontSize="Medium" Margin="0,10"/>
+                <Entry x:Name="MealNameEntry" Placeholder="Enter example meal based on the food" FontSize="Medium"/>
+
+                <Label Text="Meal Image" FontSize="Medium" Margin="0,10"/>
+
+                <Image x:Name="resultImage2" HeightRequest="150" Margin="0,10">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="ImageTap2" Tapped="ImageTap_Tapped2"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Label Text="Meal Ingredients" FontSize="Medium" Margin="0,10"/>
+                <Editor x:Name="IngredientsEntry" Placeholder="Enter meal ingredient" FontSize="Medium" HeightRequest="100" />
+
+                <Label Text="Instructions to Cook" FontSize="Medium" Margin="0,10"/>
+                <Editor x:Name="InstructionEntry" Placeholder="Enter cooking instructions for the meal" FontSize="Medium" HeightRequest="100" />
+
+
+                <Button Text="Add Food" FontSize="Medium" Clicked="OnAddMealClicked" Margin="0,20"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
